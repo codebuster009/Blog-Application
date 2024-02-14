@@ -1,40 +1,33 @@
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="flex justify-between bg-red-700 p-3">
-        <div className="flex space-x-2">
-        <div><div className = "text-left font-[poppins]">Blog-Fest</div></div>
-        <div>
-        <div><img className ="h-5 inline cursor-pointer"src = "https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/comment-blog-icon.png" alt="Blog-Icon"/></div>
-        </div>
-        </div>
-      <div className="text-3xl ">
-        <div className="flex-col">
-        <div className="space-y-2">
-          <div className="w-8 h-0.5 bg-white"></div>
-          <div className="w-8 h-0.5 bg-white"></div>
-          <div className="w-8 h-0.5 bg-white"></div>
-        </div>
-        <div>
-        <ul className="flex">
-            <li>
-                <a href="#" className="text-xl peer-hover:text-cyan-500 duration-500">Home</a>
-            </li>
-            <li>
-                <a href="#" className="text-xl peer-hover:text-cyan-500 duration-500">About</a>
-            </li>
-            <li>
-                <a href="#" className="text-xl peer-hover:text-cyan-500 duration-500">Press</a>
-            </li>
-            <li>
-                <a href="#" className="text-xl peer-hover:text-cyan-500 duration-500">Contact</a>
-            </li>
-            <li>
-                <a href="#" className="text-xl peer-hover:text-cyan-500 duration-500">Login</a>
-            </li>
-        </ul>
-        </div>
-        </div>
-      </div>
+  <div>
+        <header className="flex items-center justify-between py-4 border-b">
+      <Link to="/" className="px-2 lg:px-0 uppercase font-bold text-purple-800">
+        LOGO
+      </Link>
+      <ul className="inline-flex items-center">
+        <li className="px-2 md:px-4">
+          <Link to="/" className="text-purple-600 font-semibold hover:text-purple-500"> Home </Link>
+        </li>
+        <li className="px-2 md:px-4">
+          <a href="#" className="text-gray-500 font-semibold hover:text-purple-500"> About </a>
+        </li>
+        <li className="px-2 md:px-4">
+          <a href="#" className="text-gray-500 font-semibold hover:text-purple-500"> Press </a>
+        </li>
+        <li className="px-2 md:px-4">
+          <a href="#" className="text-gray-500 font-semibold hover:text-purple-500"> Contact </a>
+        </li>
+        <li className="px-2 md:px-4 hidden md:block">
+        <Link to= "/login" className="text-gray-500 font-semibold hover:text-purple-500"> Login </Link>
+        </li>
+        <li className="px-2 md:px-4 hidden md:block">
+          <Link to= "/register" className="text-gray-500 font-semibold hover:text-purple-500"> Register </Link>
+        </li>
+      </ul>
+
+    </header>
     </div>
   );
 };
